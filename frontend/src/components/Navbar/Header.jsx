@@ -66,7 +66,15 @@
 
 // export default Navbar;
 
-import { Image, Flex, Button, HStack, chakra, Text } from "@chakra-ui/react";
+import {
+  Image,
+  Flex,
+  Button,
+  HStack,
+  chakra,
+  Text,
+  Box,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
 import MobileDrawer from "./MobileDrawer";
@@ -77,31 +85,40 @@ export default function Header() {
   return (
     <chakra.header id="header">
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
-        <Text
-          fontSize={{ base: "16", sm: "16" }}
-          fontWeight={"bold"}
-          textTransform={"uppercase"}
-          textAlign={"center"}
-          bgGradient={"linear(to-r, cyan.400, blue.500)"}
-          bgClip={"text"}
-        >
-          <Link to={"/"}>CV. David Teknik Blower</Link>
-        </Text>
+        <HStack spacing="2">
+          <Box
+            width={"40px"}
+            height={"40px"}
+            border={"1px"}
+            textAlign={"center"}
+            py={"6px"}
+          >
+            Logo
+          </Box>
+          <Text
+            fontSize={{ base: "9", sm: "14", md: "16", lg: "20" }}
+            fontWeight={"bold"}
+            textTransform={"uppercase"}
+            textAlign={"center"}
+          >
+            <Link to={"/"}>CV. David Teknik Blower</Link>
+          </Text>
+        </HStack>
         <HStack as="nav" spacing="2" display={{ base: "none", md: "flex" }}>
           <Link to={"/"}>
-            <Button>Home</Button>
+            <Button variant="ghost">Home</Button>
           </Link>
 
           <Link to={"/product"}>
-            <Button>Product</Button>
+            <Button variant="ghost">Product</Button>
           </Link>
 
           <Link to={"/clients"}>
-            <Button>Clients</Button>
+            <Button variant="ghost">Clients</Button>
           </Link>
 
           <Link to={"/contact"}>
-            <Button>Contact</Button>
+            <Button variant="ghost">Contact</Button>
           </Link>
         </HStack>
 
