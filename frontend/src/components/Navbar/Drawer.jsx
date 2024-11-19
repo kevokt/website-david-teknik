@@ -34,7 +34,9 @@ export default function DrawerExample({
         <DrawerContent alignItems="center">
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />
           <DrawerHeader my={p}>
-            <Text as="p"> {title} </Text>
+            <Text as="p" fontSize={"2rem"}>
+              {title}
+            </Text>
           </DrawerHeader>
           <DrawerBody>{children}</DrawerBody>
           <DrawerFooter>{footer}</DrawerFooter>

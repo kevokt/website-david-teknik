@@ -1,71 +1,3 @@
-// import React from "react";
-// import {
-//   Button,
-//   Box,
-//   Container,
-//   Flex,
-//   HStack,
-//   Text,
-//   MenuIcon,
-// } from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
-// import { CloseIcon } from "@chakra-ui/icons";
-
-// const MenuToggle = ({ toggle, isOpen }) => {
-//   return (
-//     <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-//       {isOpen ? <CloseIcon /> : <MenuIcon />}
-//     </Box>
-//   );
-// };
-
-// const Navbar = () => {
-//   return (
-//     <Container maxW={"1140px"} px={4}>
-//       <Flex
-//         h={16}
-//         alignItems={"center"}
-//         justifyContent={"space-between"}
-//         flexDir={{
-//           base: "column",
-//           sm: "row",
-//         }}
-//       >
-//         <Text
-//           fontSize={{ base: "22", sm: "28" }}
-//           fontWeight={"bold"}
-//           textTransform={"uppercase"}
-//           textAlign={"center"}
-//           bgGradient={"linear(to-r, cyan.400, blue.500)"}
-//           bgClip={"text"}
-//         >
-//           <Link to={"/"}>CV. David Teknik Blower</Link>
-//         </Text>
-
-//         <HStack spacing={2} alignItems={"center"}>
-//           <Link to={"/"}>
-//             <Button>Home</Button>
-//           </Link>
-
-//           <Link to={"/product"}>
-//             <Button>Product</Button>
-//           </Link>
-
-//           <Link to={"/clients"}>
-//             <Button>Clients</Button>
-//           </Link>
-
-//           <Link to={"/contact"}>
-//             <Button>Contact</Button>
-//           </Link>
-//         </HStack>
-//       </Flex>
-//     </Container>
-//   );
-// };
-
-// export default Navbar;
-
 import {
   Image,
   Flex,
@@ -79,11 +11,9 @@ import { Link } from "react-router-dom";
 import React from "react";
 import MobileDrawer from "./MobileDrawer";
 
-const CTA = "Get Started";
-
 export default function Header() {
   return (
-    <chakra.header id="header">
+    <chakra.header id="header" mb={0}>
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
         <HStack spacing="2">
           <Box
@@ -96,7 +26,7 @@ export default function Header() {
             Logo
           </Box>
           <Text
-            fontSize={{ base: "9", sm: "14", md: "16", lg: "20" }}
+            fontSize={{ base: "10", sm: "15", md: "17", lg: "21" }}
             fontWeight={"bold"}
             textTransform={"uppercase"}
             textAlign={"center"}
@@ -106,19 +36,27 @@ export default function Header() {
         </HStack>
         <HStack as="nav" spacing="2" display={{ base: "none", md: "flex" }}>
           <Link to={"/"}>
-            <Button variant="ghost">Home</Button>
+            <Button variant="ghost" fontSize={"1.25rem"}>
+              Home
+            </Button>
           </Link>
 
           <Link to={"/product"}>
-            <Button variant="ghost">Product</Button>
+            <Button variant="ghost" fontSize={"1.25rem"}>
+              Product
+            </Button>
           </Link>
 
           <Link to={"/clients"}>
-            <Button variant="ghost">Clients</Button>
+            <Button variant="ghost" fontSize={"1.25rem"}>
+              Clients
+            </Button>
           </Link>
 
           <Link to={"/contact"}>
-            <Button variant="ghost">Contact</Button>
+            <Button variant="ghost" fontSize={"1.25rem"}>
+              Contact
+            </Button>
           </Link>
         </HStack>
 
